@@ -13,6 +13,8 @@ git clone https://github.com/Breadleaf/bash
 
 ### Configure bash to run my config
 
+add this to your `~/.bashrc`
+
 ```
-echo "source '~/.config/bash/entry.bash'" >> ~/.bashrc
+source ~/.config/bash/entry.bash
 ```
