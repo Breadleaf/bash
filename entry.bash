@@ -61,12 +61,12 @@ source ~/.config/bash/alias.bash
 source ~/.config/bash/functions.bash
 
 #
-# NOTE: It is up to you to make your own ~/.bash_custom file as it contains my
+# NOTE: It is up to you to make your own ~/.config/bash/custom.bash file as it contains my
 #       ssh commands and other commands only relevant to my machines.
 #
 
-if [ -f ~/.bash_custom ]; then
-	source ~/.bash_custom
+if [ -f ~/.config/bash/custom.bash ]; then
+	source ~/.config/bash/custom.bash
 fi
 
 ######################################################
