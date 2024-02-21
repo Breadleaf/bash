@@ -6,27 +6,16 @@
 
 alias edbf="vim ~/.config/bash/functions.bash"
 
-ve ()
+vim ()
 {
-	help="Command Syntax:\nve -flag <file-name>\nve -p : python3\nve --cpp : cpp\nve -c : c"
+	if command -v nvim > /dev/null 2>&1; then
+		nvim "$@"
+	elif command -v vim > /dev/null 2>&1; then
+		vim "$@"
+	else
+		echo "Please install neovim or vim"
+	fi
 
-	case $1 in
-		"-h")
-			echo -e $help
-			;;
-		"-p")
-			clear && vim $2 && python3 $2
-			;;
-		"--cpp")
-			clear && vim $2 && g++ $2 && ./a.out
-			;;
-		"-c")
-			clear && vim $2 && gcc $2 && ./a.out
-			;;
-		*)
-			echo -e $help
-			;;
-	esac
 }
 
 yt-cli ()
